@@ -36,9 +36,9 @@ try:
         res4 = ADC_Value[3]*5.0/0x7fffff
 
         # Print current values
-        print ("0 ADC = %lf"%(res1)
-        print ("1 ADC = %lf"%(res2)
-        print ("2 ADC = %lf"%(res3)
+        print ("0 ADC = %lf"%(res1))
+        print ("1 ADC = %lf"%(res2))
+        print ("2 ADC = %lf"%(res3))
         print ("3 ADC = %lf"%(ADC_Value[3]))
         print ("3 ADC = %lf"%(ADC_Value[3]*5.0))
         print ("3 ADC = %lf"%(ADC_Value[3]*5.0/0x7fffff))
