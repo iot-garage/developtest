@@ -6,7 +6,7 @@
 # *----------------
 # * |	This version:   V1.0
 # * | Date        :   2019-01-24
-# * | Info        :   
+# * | Info        :
 # ******************************************************************************/
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documnetation files (the "Software"), to deal
@@ -51,10 +51,9 @@ def delay_ms(delaytime):
 
 def spi_writebyte(data):
     SPI.writebytes(data)
-    
+
 def spi_readbytes(reg):
     return SPI.readbytes(reg)
-    
 
 def module_init():
     GPIO.setmode(GPIO.BCM)
@@ -66,5 +65,10 @@ def module_init():
     SPI.max_speed_hz = 20000
     SPI.mode = 0b01
     return 0;
+
+
+
+
+
 
 ### END OF FILE ###
