@@ -13,10 +13,11 @@ try:
 
     # Construct device
     device = Device("60104ece5749350006d2e0fd", "213699ae-314a-408e-bd0f-7b496fec009d", "b3623a4b632cb3cb3c80c39eee0f9fe9f2fb3c13990300021b941d01aa61c07c")
+
     def on_command(device, command):
-    print("Command received.")
-    print(command["name"])
-    print(command["payload"])
+        print("Command received.")
+        print(command["name"])
+        print(command["payload"])
 
     # Listen for commands.
     device.add_event_observer("command", on_command)
