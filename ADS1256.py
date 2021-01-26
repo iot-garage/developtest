@@ -4,7 +4,7 @@ import config
 import RPi.GPIO as GPIO
 
 
-ScanMode = 0
+ScanMode = 1
 
 
 # gain channel
@@ -161,7 +161,7 @@ class ADS1256:
         else:
             print("ID Read failed   ")
             return -1
-        self.ADS1256_ConfigADC(ADS1256_GAIN_E['ADS1256_GAIN_1'], ADS1256_DRATE_E['ADS1256_30000SPS'])
+        self.ADS1256_ConfigADC(ADS1256_GAIN_E['ADS1256_GAIN_64'], ADS1256_DRATE_E['ADS1256_500SPS'])
         return 0
 
     def ADS1256_Read_ADC_Data(self):
@@ -180,7 +180,7 @@ class ADS1256:
         return read
 
     def ADS1256_GetChannalValue(self, Channel):
-        if(ScanMode == 0):# 0  Single-ended input  8 channel1 Differential input  4 channe
+        if(ScanMode == 0):# 0 - Single-ended input  8 channel. 1 - Differential input  4 channe
             if(Channel>=8):
                 return 0
             self.ADS1256_SetChannal(Channel)
