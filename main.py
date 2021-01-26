@@ -46,7 +46,7 @@ try:
         #    print ("5 ADC = %lf"%(ADC_Value[5]*5.0/0x7fffff))
         #    print ("6 ADC = %lf"%(ADC_Value[6]*5.0/0x7fffff))
         #    print ("7 ADC = %lf"%(ADC_Value[7]*5.0/0x7fffff))
-        print ("\33[9A")
+        print ("\33[6A")
 
         # Send values to cloud
         device.loop()
